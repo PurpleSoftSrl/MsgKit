@@ -481,14 +481,14 @@ internal class Properties : List<Property>
                         break;
 
                     case TypeCode.SByte:
-                        data = BitConverter.GetBytes((sbyte)obj);
+                        data = new[] { (byte)(sbyte)obj };
                         break;
 
                     case TypeCode.Byte:
-                        data = BitConverter.GetBytes((byte)obj);
+                        data = new[] { (byte)obj };
                         break;
                     case TypeCode.Int16:
-                        data = BitConverter.GetBytes((short)obj);
+                        data = BitConverter.GetBytes((Int16)obj);
                         break;
 
                     case TypeCode.UInt16:
